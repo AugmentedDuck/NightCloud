@@ -8,17 +8,6 @@ let rightButton;
 function setup() {
   createCanvas(600, 400);
   background(200)
-
-  leftButton = createButton("This one")
-  leftButton.size(50, 50)
-  leftButton.position(10, height / 1.5);
-  leftButton.mousePressed(chooseLeft)
-
-  rightButton = createButton("This one")
-  rightButton.size(50, 50)
-  rightButton.position(width - 50 - 10, height / 1.5);
-  rightButton.mousePressed(chooseRight)
-  
   for (let i = 0; i < nrOfElements; i++){
     unsortedArray[i] = int(random(nrOfElements))
   }
