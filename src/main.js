@@ -24,7 +24,11 @@ function chooseRight(){
 }
 
 function nextComp(i, j){
-  if (i < photoList.length - 2){
+  let isDone = false
+  let favoritePhoto = 0
+  let hatedPhoto = 0
+
+  if (i < nrOfElements - 2){
     if (j < nrOfElements - 1){
       j++
     } else {
@@ -33,14 +37,15 @@ function nextComp(i, j){
       j++
     }
   } else {
-    let highest = scoreArray.max()
-    let lowest = scoreArray.min()
+    let highest = Math.max(...scoreArray)
+    let lowest = Math.min(...scoreArray)
 
-    let favoritePhoto = scoreArray.indexOf(highest)
-    let hatedPhoto = scoreArray.indexOf(lowest)
+    favoritePhoto = scoreArray.indexOf(highest)
+    hatedPhoto = scoreArray.indexOf(lowest)
 
-    document.getElementById("left-img").src="./images/" + favoritePhoto + ".jpeg";
-    document.getElementById("right-img").src="./images/" + hatedPhoto + ".jpeg";
+    isDone = true
+
+    console.log(highest + " " + lowest + " - " + favoritePhoto + " " + hatedPhoto)
   }
 
   currentComp[0] = i
@@ -49,6 +54,11 @@ function nextComp(i, j){
   document.getElementById("left-img").src="./images/" + currentComp[0] + ".jpeg";
   document.getElementById("right-img").src="./images/" + currentComp[1] + ".jpeg";
   console.log(currentComp)
+
+  if(isDone){
+    document.getElementById("left-img").src="./images/" + favoritePhoto + ".jpeg";
+    document.getElementById("right-img").src="./images/" + hatedPhoto + ".jpeg";
+  }
 }
 
 window.onload = function() {
