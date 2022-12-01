@@ -20,8 +20,9 @@ header {
 
 .container {
   max-width: 900px;
-  margin: 0 auto;
-  padding: 0 1.5em;
+  margin: 1em auto;
+  align-items: center;
+  padding: 0 0;
 }
 
 .btn {
@@ -29,7 +30,7 @@ header {
   vertical-align: middle;
   padding: .67em 1em;
   cursor: pointer;
-  margin: 1% 1%;
+  margin: 1%;
   border: 2px solid var(--main-dark-color);
   background-color: var(--main-color);
   font-size: 1.5em;
@@ -50,9 +51,8 @@ img {
 .column {
   display: block;
   align-items: center;
-  margin-right: 1.5em;
+  margin: .5em auto;
   padding-bottom: 10px;
-  margin-top: 10px;
   text-align: center;
   font-size: 1.2em;
   font-weight: bold;
@@ -63,9 +63,23 @@ img {
 }
 
 .column1 {
-  width: 50%;
+  width: 45%;
 }
 
 .column2 {
-  width: 50%;
+  width: 45%;
+}
+
+.try-btn {
+  display: block;
+  margin: 1em auto;
+}
+
+.start-btn {
+  display: block;
+  margin: .5em auto;
+}
+
+.hidden {
+  display: none;
 }
