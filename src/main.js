@@ -58,6 +58,11 @@ function nextComp(i, j){
   if(isDone){
     document.getElementById("left-img").src="./images/" + favoritePhoto + ".jpeg";
     document.getElementById("right-img").src="./images/" + hatedPhoto + ".jpeg";
+    document.getElementById("left-btn").classList.add("hidden")
+    document.getElementById("right-btn").classList.add("hidden")
+    document.getElementById("fav-btn").classList.remove("hidden")
+    document.getElementById("hate-btn").classList.remove("hidden")
+    document.getElementById("try-btn").classList.remove("hidden")
   }
 }
 

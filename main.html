@@ -5,23 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./src/style.css">
 
-    <title>Sketch</title>
+    <title>Night Cloud</title>
   </head>
 
   <body>
-    <header>
+    <header class="container">
       <h1 class="title">Night Cloud</h1>
     </header>
 
     <section class="container">
       <h2 class="choose-text column-mid column">Choose one</h2>
       <div class="row">
-        <img class="column1 column" id="left-img" src="./images/1.jpeg" alt="">
-        <img class="column2 column" id="right-img" src="./images/2.jpeg" alt="">
+        <img class="column1 column" id="left-img" src="./images/0.jpeg" alt="">
+        <img class="column2 column" id="right-img" src="./images/1.jpeg" alt="">
       </div>
       <div class="row">
-        <button class="btn choose-btn column1 column" id="left-btn" type="button" onclick="chooseLeft()">Left</button>
-        <button class="btn choose-btn column2 column" id="right-btn" type="button" onclick="chooseRight()">Right</button>
+        <button class="btn column1 column" id="left-btn" type="button" onclick="chooseLeft()">Left</button>
+        <button class="btn column1 column hidden" id="fav-btn" type="button">Favorite</button>
+        <button class="btn column2 column" id="right-btn" type="button" onclick="chooseRight()">Right</button>
+        <button class="btn column2 column hidden" id="hate-btn" type="button">Least Favorite</button>
+      </div>
+      <div>
+        <button class="btn try-btn hidden" id="try-btn" type="button" onclick="location.href = './index.html'">Try Again</button>
       </div>
     </section>
 
